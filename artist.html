@@ -17,8 +17,10 @@
     
     <!-- Personal CSS document -->
     <style>
+    body{
+      background-color: black;
+    }
     
- 
     </style>
 
     <link rel="stylesheet" href="style.css" />
@@ -47,7 +49,7 @@
               </li>
             </ol>
           </div>
-          <div class="user">
+          <div class="user" style="margin-bottom: 4rem;">
             <div class="user-image">
               <img src="https://placehold.it/30x30" alt="" />
             </div>
@@ -56,97 +58,105 @@
         </div>
       </nav>
       <!-- This will be the main part -->
-      <div class="main">
-            
-        <img src="stramash.jpg" width="100%" alt="">
-      
+      <div class="main-artist">
+        <div id="shade">
+          <img src="stramash.jpg" alt="" width="100%">
+          <div id="shadeBg"></div>
+        </div>
+
+        
       <div class="centered">
-        <p>33,000,575 MONTHLY LISTENERS</p>
-        <h1><b></b> Queen</h1>
+        <div>
+        <p>33,000,575 MONTHLY LISTENERS</p>  
+        <h1><b> Queen</b></h1>
         <input class="btn btn-success"type="button" value="Play">
         <input class="btn btn-primary-outline"type="button"  value="Follow">
         <div class="mt-5">
-        <a href="" class="mr-3" >OVERVIEW</a>
-        <a href="" class="mr-3">RELATED ARTIST</a>
-        <a href="" class="mr-3">ABOUT</a>
+        <a href="#" class="mr-3" onclick="linkBorder()" >OVERVIEW</a>
+        <a href="#" class="mr-3" onclick="linkBorder2()" >RELATED ARTIST</a>
+        <a href="#" class="mr-3"onclick="linkBorder3()" >ABOUT</a>
         </div>
-        
+        </div>
       </div>
-      <div class="mycards pt-5 pb-5">
+      <div class="mycards pt-5 pb-5 ">
+        <h5 class="ml-3 pb-3" >ALBUMS</h5>
         <div class="row m-0">
-        <div class="col col-6 col-md-4 col-lg-2 text-center">
-            <img class="img-fluid" src="https://placehold.it/150" alt="" />
+          
+        <div class="col col-6 col-md-4 col-lg-2 text-center ">
+            <img class="img-fluid gradient" src="bohemian.jpg" style="width: 9rem; height: 9rem;"  alt="" />
             
-            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Bohemian</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
             
         </div>
         <div class="col col-6 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="https://placehold.it/150" alt="" />
+            <img class="img-fluid" src="onair.jpg" style="width: 9rem; height: 9rem;"alt="" />
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
         </div>
         <div class="col col-6 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="https://placehold.it/150" alt="" />
-            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <img class="img-fluid" src="odeon.jpg"style="width: 9rem; height: 9rem; alt="" />
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Odeon</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
         </div>
        <div class="col col-6 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid"  src="https://placehold.it/150" alt="" />
-            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <img class="img-fluid"  src="rainbow.jpg" style="width: 9rem; height: 9rem;alt="" />
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Rainbow</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
         </div>
        <div class="col col-6 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="https://placehold.it/150" alt="" />
-            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <img class="img-fluid" src="hungarian.jpg"style="width: 9rem; height: 9rem; alt="" />
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Hungarian</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
         </div>
        <div class="col col-6 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="https://placehold.it/150" alt="" />
-            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <img class="img-fluid" src="opera.jpg"style="width: 9rem; height: 9rem; alt="" />
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Opera</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
         </div>
     </div>
       </div>
-      <div class="mycards pt-5 pb-5">
+      <!-- The albums -->
+      <div class="mycards pt-5 pb-5 mb-5 ">
         <div class="row m-0">
         <div class="col col-6 col-md-4 col-lg-2 text-center">
-            <img class="img-fluid" src="https://placehold.it/150" alt="" />
+            <img class="img-fluid" src="innuedo.jpg"style="width: 9rem; height: 9rem; alt="" />
             
-            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Innuedo</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
             
         </div>
         <div class="col col-6 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="https://placehold.it/150" alt="" />
-            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <img class="img-fluid" src="jazz.jpg"style="width: 9rem; height: 9rem; alt="" />
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Jazz</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
         </div>
         <div class="col col-6 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="https://placehold.it/150" alt="" />
-            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <img class="img-fluid" src="hotspace.jpg"style="width: 9rem; height: 9rem; alt="" />
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Hotspace</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
         </div>
        <div class="col col-6 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid"  src="https://placehold.it/150" alt="" />
-            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <img class="img-fluid"  src="madeinheaven.jpg" style="width: 9rem; height: 9rem;alt="" />
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Made in Heaven</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
         </div>
        <div class="col col-6 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="https://placehold.it/150" alt="" />
-            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <img class="img-fluid" src="miracle.jpg"style="width: 9rem; height: 9rem; alt="" />
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Miracle</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
         </div>
        <div class="col col-6 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="https://placehold.it/150" alt="" />
-            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
-            <p style="margin-bottom: 0;">Queen</p>
+            <img class="img-fluid" src="ordained.jpg"style="width: 9rem; height: 9rem; alt="" />
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Ordained</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
         </div>
     </div>
       </div>
-      <div class="player d-flex justify-content-between">
+      <!-- Footer Part -->
+      <div class="player d-flex justify-content-between fixed-bottom mt-5">
         <div class="left d-flex">
-            <img src="images/81AyAROqAGL._AC_SX466_.jpg" alt="">
+            <img src="footer.jpg" alt="">
             <div class="d-flex flex-column">
                 <p>Song For My Father</p>
                 <p>Horace Silver</p>
@@ -242,5 +252,8 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"
   ></script>
+  
+  <script src="artist.js"></script>
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js%22%3E">  </script>
   </body>
   </html>

@@ -1,5 +1,5 @@
 
-
+/* NAV BAR ASIDE */
   #spotify-side-nav{
     max-width: 20%;
     min-width: 200px;
@@ -85,12 +85,13 @@
     font-size: 1.5rem;
     color: #ffffff;
 }
-  div.bg-text>input{
+/* Main page */
+div.centered > div > input{
     border-radius: 40px;
     padding: 5px 3em;
    
 }
-.main{
+.main-artist{
     position: relative;
     text-align: center;
      color: white;
@@ -103,6 +104,21 @@
     height: 20rem;
 
     
+}
+.main-artist > #shade > img{
+    height: 20rem;
+}
+
+#shadeBg{
+    content: '';
+    width: 100%;
+    height: 20rem;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(15,15,15,1) 0%, rgba(0,0,0,0.6894957812226453) 36%, rgba(15,15,15,0.5046218316428134) 91%);
+}
+#shade{
+    position: relative;
 }
 .centered {
     position: absolute;
@@ -120,14 +136,28 @@ a.mr-3{
     
 }
   .mycards{
-      background-color: #333;
+      background-color: rgb(15, 15, 15);
       text-align: left;
       
   }
   .mycards p{
     color: black;
 }
-
+@media only screen and (max-width: 896px){
+    a.mr-3{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:841px){
+    div.centered > input{
+        padding: 3px 1rem;
+    }
+}
+@media only screen and (max-width: 863px){
+    a.mr-3{
+        font-size: 14px;
+    }
+}
 /* Footer css */
 div.player .left {
     align-items: center;
@@ -136,6 +166,7 @@ div.player .left {
 div.player {
     height: 4rem;
     background-color: rgb(44, 43, 43);
+   
 }
 
 div.player img:nth-of-type(1){
@@ -179,4 +210,7 @@ div.player svg:nth-of-type(2){
 
 .player{
     margin-top: 1rem;
+}
+.border1{
+    border-bottom: 3px green solid;
 }
