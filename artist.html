@@ -23,11 +23,14 @@
     
     </style>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="artist.css" />
   </head>
   <body>
       <!-- Side NavBar -->
       <nav id="spotify-side-nav">
+        <div id="toggler-side-nav" onclick="hide()">
+          <i class="fas fa-caret-right"></i>
+        </div>
         <div class="nav-title">
           <i class="fab fa-spotify"></i>
           <h3>Strive Spotify</h3>
@@ -37,7 +40,7 @@
             <ol>
               <li>
                 <i class="fas fa-home"></i>
-                <a href="#">Home</a>
+                <a href="home.html">Home</a>
               </li>
               <li>
                 <i class="fas fa-search"></i>
@@ -45,22 +48,23 @@
               </li>
               <li>
                 <ion-icon name="library-outline"></ion-icon>
-                <a href="">Library</a>
+                <a href="library.html">Library</a>
               </li>
             </ol>
           </div>
-          <div class="user" style="margin-bottom: 4rem;">
+          <div class="user">
             <div class="user-image">
               <img src="https://placehold.it/30x30" alt="" />
             </div>
-            <h4>User name</h4>
+            <a href="login.html">User name</a>
           </div>
         </div>
       </nav>
       <!-- This will be the main part -->
+
       <div class="main-artist">
         <div id="shade">
-          <img src="stramash.jpg" alt="" width="100%">
+          <img src="./Media/ArtistPage/stramash.jpg" alt="" width="100%">
           <div id="shadeBg"></div>
         </div>
 
@@ -72,91 +76,245 @@
         <input class="btn btn-success"type="button" value="Play">
         <input class="btn btn-primary-outline"type="button"  value="Follow">
         <div class="mt-5">
-        <a href="#" class="mr-3" onclick="linkBorder()" >OVERVIEW</a>
+        <a href="#" class="mr-3 border1" onclick="linkBorder()" >OVERVIEW</a>
         <a href="#" class="mr-3" onclick="linkBorder2()" >RELATED ARTIST</a>
         <a href="#" class="mr-3"onclick="linkBorder3()" >ABOUT</a>
         </div>
         </div>
       </div>
+      <div class="hiddenorshow">
       <div class="mycards pt-5 pb-5 ">
         <h5 class="ml-3 pb-3" >ALBUMS</h5>
+        
         <div class="row m-0">
           
         <div class="col col-12 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid gradient" src="bohemian.jpg" style="width: 9rem; height: 9rem;"  alt="" />
-            
+          <div class="first-image ">
+          <a href="#">  <img class="img-fluid gradient" src="./Media/ArtistPage/bohemian.jpg" style="width: 9rem; height: 9rem;"  alt="" /></a>
+          <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Bohemian</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
-            
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
         </div>
         <div class="col col-12 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="onair.jpg" style="width: 9rem; height: 9rem;"alt="" />
+          <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/onair.jpg" style="width: 9rem; height: 9rem;"alt="" />
+            <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">On Air</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>   
         </div>
+
         <div class="col col-12 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="odeon.jpg"style="width: 9rem; height: 9rem; alt="" />
+          <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/odeon.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Odeon</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
         </div>
+      </div>
+
        <div class="col col-12 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid"  src="rainbow.jpg" style="width: 9rem; height: 9rem;alt="" />
+        <div class="first-image #shade">
+            <img class="img-fluid"  src="./Media/ArtistPage/rainbow.jpg" style="width: 9rem; height: 9rem;"alt="" />
+            <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Rainbow</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
         </div>
+        </div>
+
        <div class="col col-12 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="hungarian.jpg"style="width: 9rem; height: 9rem; alt="" />
+        <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/hungarian.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Hungarian</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
         </div>
+        </div>
+
        <div class="col col-12 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="opera.jpg"style="width: 9rem; height: 9rem; alt="" />
+        <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/opera.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Opera</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
         </div>
     </div>
       </div>
+      </div>
       <!-- The albums -->
+      
       <div class="mycards pt-5 pb-5 mb-5 ">
         <div class="row m-0">
         <div class="col col-12 col-md-4 col-lg-2 text-center">
-            <img class="img-fluid" src="innuedo.jpg"style="width: 9rem; height: 9rem; alt="" />
-            
+          <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/innuedo.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Innuedo</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
-            
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
         </div>
+        </div>
+
         <div class="col col-12 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="jazz.jpg"style="width: 9rem; height: 9rem; alt="" />
+          <div class="first-image " id="shade">
+            <img class="img-fluid" src="./Media/ArtistPage/jazz.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Jazz</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
+        </div>
         </div>
         <div class="col col-12 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="hotspace.jpg"style="width: 9rem; height: 9rem; alt="" />
+          <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/hotspace.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Hotspace</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
         </div>
+        </div>
+
        <div class="col col-12 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid"  src="madeinheaven.jpg" style="width: 9rem; height: 9rem;alt="" />
+        <div class="first-image #shade">
+            <img class="img-fluid"  src="./Media/ArtistPage/madeinheaven.jpg" style="width: 9rem; height: 9rem;"alt="" />
+            <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Made in Heaven</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
+        </div>
         </div>
        <div class="col col-12 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="miracle.jpg"style="width: 9rem; height: 9rem; alt="" />
+        <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/miracle.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Miracle</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
+        </div>
         </div>
        <div class="col col-12 col-md-4 col-lg-2 text-center ">
-            <img class="img-fluid" src="ordained.jpg"style="width: 9rem; height: 9rem; alt="" />
+        <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/ordained.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
             <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Ordained</p>
             <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
         </div>
     </div>
+    </div>
       </div>
+    </div>
+      <!-- Example part -->
+      <div class="Relatedartist" style="display: none;">
+      <div class=" pt-5 pb-5 mb-5 " >
+        <div class="row m-0">
+        <div class="col col-12 col-md-4 col-lg-2 text-center">
+          <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/innuedo.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Innuedo</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
+        </div>
+        </div>
+
+        <div class="col col-12 col-md-4 col-lg-2 text-center ">
+          <div class="first-image " id="shade">
+            <img class="img-fluid" src="./Media/ArtistPage/jazz.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Jazz</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
+        </div>
+        </div>
+        <div class="col col-12 col-md-4 col-lg-2 text-center ">
+          <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/hotspace.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Hotspace</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
+        </div>
+        </div>
+
+       <div class="col col-12 col-md-4 col-lg-2 text-center ">
+        <div class="first-image #shade">
+            <img class="img-fluid"  src="./Media/ArtistPage/madeinheaven.jpg" style="width: 9rem; height: 9rem;"alt="" />
+            <div class="shadebg1"></div>
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Made in Heaven</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
+        </div>
+        </div>
+       <div class="col col-12 col-md-4 col-lg-2 text-center ">
+        <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/miracle.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Miracle</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
+        </div>
+        </div>
+       <div class="col col-12 col-md-4 col-lg-2 text-center ">
+        <div class="first-image #shade">
+            <img class="img-fluid" src="./Media/ArtistPage/ordained.jpg"style="width: 9rem; height: 9rem;" alt="" />
+            <div class="shadebg1"></div>
+            <p style="color: white; padding-bottom: 0; margin-bottom: 0;">Ordained</p>
+            <p style="margin-bottom: 0; color:lightgray;">Queen</p>
+            <div class="library-play-button">
+              <i class="fas fa-play"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+      </div>
+    </div>
+      <!-- End of Example -->
       <!-- Footer Part -->
       <div class="player d-flex justify-content-between fixed-bottom mt-5">
         <div class="left d-flex">
-            <img src="footer.jpg" alt="">
+            <img src="./Media/ArtistPage/footer.jpg" alt="">
             <div class="d-flex flex-column">
                 <p>Song For My Father</p>
                 <p>Horace Silver</p>
@@ -252,8 +410,11 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"
   ></script>
-  
+  <script src="index.js"></script>
   <script src="artist.js"></script>
   <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js%22%3E">  </script>
-  </body>
+<!-- IONICONS LIBRARY-->
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  
+</body>
   </html>

@@ -1,0 +1,119 @@
+/* ALBUM-------------------------------------------------------------------------------------------------------- */
+
+#page-content{
+    width: calc(100%-220px);
+    height: 100%;
+    margin-left: 220px;
+    padding-bottom: 4rem;
+    overflow: hidden;
+    
+}
+
+.album-page{/*SLIDER*/
+    width: 100%;
+    height: 100%;
+}
+
+.row.album{/*SINGLE ALBUM*/
+    width: 100%;
+    height: 100%;
+}
+
+/*ALBUM OVERVIEW*/
+
+.album-overview{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: white;
+    padding: 20px;
+    padding-left: 10%;
+    text-align: center;
+}
+
+.album-overview > div, input{
+    margin: 10px;
+}
+
+.album-overview p{
+    font-size: small;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.album-overview input{
+    padding: 10px;
+    width: 100px;
+    border-radius: 40px;
+    border: none;
+    background-color: #1db954;
+    color: #ffffff;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.album-overview .album-options i{
+    margin: 5px;
+    cursor: pointer;
+}
+.album-options .like{
+    position: relative;
+}
+.album-options .like .fas{
+    position: absolute;
+    margin-left: -84%;
+    opacity: 0;
+}
+
+/*ALBUM TRACKS*/
+
+.album-track-list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: #ffffff;
+    padding: 20px;
+
+}
+
+.album-track{
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.album-track:hover{
+    animation: blinking-text 1.5s infinite;
+}
+
+.title{
+    display: flex;
+    overflow: auto;
+}
+
+.title i{
+    align-self: center;
+}
+
+.title-artist{
+    margin-left: 10px;
+}
+
+.title-artist h6, p{
+    margin: 0;
+}
+
+.title-song{
+    display: flex;
+}
+
+.title-song{
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.title-artist p{
+    font-size: smaller;
+    color: rgba(255, 255, 255, 0.5);
+}
