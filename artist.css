@@ -555,7 +555,7 @@ div.box {
     }
 }
 .slider_container { 
-    width: 75%; 
+    width: 100%; 
     max-width: 400px; 
     display: flex; 
     justify-content: center; 

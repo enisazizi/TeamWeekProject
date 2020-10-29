@@ -1,3 +1,5 @@
+/* LOGIN PAGE-------------------------------------------------------------------------------------------------------- */
+
 let emailText = document.querySelector('#email-text')
 let usernameText = document.querySelector('#username-text')
 let passText = document.querySelector('#pass-text')
@@ -42,3 +44,4 @@ loginButton.addEventListener('click', function(){
     emailUserLogin.value = ''
     passLogin.value = ''
 })
+

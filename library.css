@@ -1,3 +1,7 @@
+
+/* LIBRARY-------------------------------------------------------------------------------------------------------- */
+
+
 #library-slider{
     width: 500%;
     padding-bottom: 4rem;
@@ -80,6 +84,7 @@
     overflow: hidden;
     background-color: #181818;
     padding: 10px;
+    margin: 0 10px;
 }
 
 .playlist-card:hover{
@@ -137,7 +142,7 @@ div:hover > .library-play-button{
 
 /* LIBRARY ALBUM-------------------------------------------------------------------------------------------------------- */
 
-.library-card-album{
+.library-card-album, .library-card-artist{
     padding: 10px;
     height: 40vh;
     display: flex;
@@ -146,14 +151,18 @@ div:hover > .library-play-button{
     justify-content: space-evenly;
     background-color: #181818;
     border-radius: 20px;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 10px;
 }
 
-.library-card-album:hover{
+
+.library-card-album:hover, .library-card-artist:hover{
     background-color: #252525;
     animation: shining-card 1s infinite;
 }
 
-.library-card-album .img-library-album{
+.library-card-album .img-library-album, .img-library-artist{
     border-radius: 50%;
     width: 200px;
     height: 200px;
@@ -162,7 +171,42 @@ div:hover > .library-play-button{
 
 }
 
-.library-card-album a{
+.library-card-album:hover > .img-library-album img, .library-card-artist:hover > .img-library-artist img{
+    transform: rotate(360deg);
+    transition: transform 2s ease;
+}
+
+.library-card-album a, .library-card-artist a{
     text-decoration: none;
     color: #ffffff;
 }
+.create{
+    background-color: #252525;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+.create i{
+    font-size: 6rem;
+    margin: 30% 0;
+    color: rgba(255,255,255, 0.6);
+}
+.create:hover{
+    animation: shining-card 1s infinite;
+}
+.create:hover > .create i{
+    animation: shining-card 1s infinite;
+}
+
+/*CREATE NEW ALBUM*/
+
+.modal-title{
+    color: black;
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
