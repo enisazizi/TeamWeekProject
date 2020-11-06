@@ -3,13 +3,16 @@
 
 
 #library-slider{
-    width: 500%;
+    width: 400%;
+    height: 100%;
     padding-bottom: 4rem;
     display: flex;
     transition: margin-left 1s ease;
 }
 
 #library-nav{
+    background-color: #141414;
+    z-index: 10;
     width: calc(100% - 200px);
     display: flex;
     justify-content: space-between;
@@ -54,6 +57,7 @@
 /* PLAYLIST-------------------------------------------------------------------------------------------------------- */
 
 .library-page{
+    height: 100%;
     color: #ffffff;
     width: 25%;
     padding: 20px;
@@ -64,7 +68,7 @@
 .library-page .row{
     width: 100%;
     margin: 0;
-    height: 40vh;
+    height: 100%;
 }
 
 #playlist-fav{
@@ -153,22 +157,32 @@ div:hover > .library-play-button{
     border-radius: 20px;
     font-size: 1rem;
     text-align: center;
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
+.library-card-album img, .library-card-artist img{
+    width: 100%;
+}
 
 .library-card-album:hover, .library-card-artist:hover{
     background-color: #252525;
     animation: shining-card 1s infinite;
 }
 
-.library-card-album .img-library-album, .img-library-artist{
+.img-library-artist{
+    border-radius: 50%;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 5px;
+
+}
+
+.library-card-album .img-library-album{
     border-radius: 50%;
     width: 200px;
     height: 200px;
     overflow: hidden;
     margin-bottom: 5px;
-
 }
 
 .library-card-album:hover > .img-library-album img, .library-card-artist:hover > .img-library-artist img{

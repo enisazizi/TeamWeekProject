@@ -23,9 +23,7 @@ libraryNav[2].addEventListener('click', function(){
 libraryNav[3].addEventListener('click', function(){
     librarySlider.style.marginLeft = '-300%'
 })
-libraryNav[4].addEventListener('click', function(){
-    librarySlider.style.marginLeft = '-400%'
-})
+
 
 //CREATE NEW ALBUM CARD
 
@@ -36,6 +34,7 @@ let newAlbumCard = document.querySelector('.library-card-album')
 let addNewAlbum = document.querySelector('.modal-footer button')
 let albumPage = document.querySelector('#library-album .row')
 
+
 let newAlbumList = []
 
 newAlbumList.push(newAlbumCard)
@@ -43,12 +42,32 @@ newAlbumList.push(newAlbumCard)
 let createAlbumCard = function(album){
   
     addNewAlbum.addEventListener('click', function(){
+        let destPage = ''
+        if(newAlbumImageSource.value === 'queenRemaster.jpg'){
+            destPage = 'remaster.html'
+        }
+        else if(newAlbumImageSource.value==='miracle.jpg'){
+            destPage = 'miracle.html'
+        }
+        else if(newAlbumImageSource.value==='25.jpg'){
+            destPage = '25.html'
+        }
+        else if(newAlbumImageSource.value==='getRich.jpg'){
+            destPage = 'getRich.html'
+        }
+        else if(newAlbumImageSource.value==='trash.jpg'){
+            destPage = 'trash.html'
+        }
+        else{
+            destPage = 'album.html'
+        }
+
             // create js object
         let album = {
             title: newAlbumName.value,
             image: './Media/' + newAlbumImageSource.value,
-            artist:newAlbumArtist.value
-            
+            artist:newAlbumArtist.value,
+            ref: destPage
         }
          // push it to array
         newAlbumList.push(album);
@@ -56,6 +75,8 @@ let createAlbumCard = function(album){
         storeIt("newAlbumList",newAlbumList)
         // re populate albums
         populateAlbums()
+        window.location.hash = '#library-album'
+        window.location.reload(true)
     })
 
 }
@@ -83,7 +104,7 @@ const AlbumCard =  (album) => `
         <div class="img-library-album">
             <img src="${album.image}" alt="" width="100%" />
         </div>
-        <a href="album.html"><h6>${album.title}</h6></a>
+        <a href=${album.ref}><h6>${album.title}</h6></a>
         <p>${album.artist}</p>
         <!--<div class="library-play-button">
         <i class="fas fa-plus"></i>

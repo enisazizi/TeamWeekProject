@@ -1,208 +1,254 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="home.css">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="index.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
 
     <title>Home</title>
-    <script src="https://kit.fontawesome.com/6d3b43cb55.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!-- Side NavBar -->
+    <!-- NAVBAR----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
     <nav id="spotify-side-nav">
-        <div id="toggler-side-nav" onclick="hide()">
-          <i class="fas fa-caret-right"></i>
+      <div id="toggler-side-nav" onclick="hide()">
+        <i class="fas fa-caret-right"></i>
+      </div>
+      <div class="nav-title">
+        <i class="fab fa-spotify"></i>
+        <h3>Strive Spotify</h3>
+      </div>
+      <div class="nav-menu">
+        <div class="list">
+          <ol>
+            <li>
+              <i class="fas fa-home"></i>
+              <a href="home.html">Home</a>
+            </li>
+            <li>
+              <i class="fas fa-search"></i>
+              <a href="#" data-toggle="modal" data-target="#staticBackdrop">Search</a>
+            </li>
+            <li>
+              <ion-icon name="library-outline"></ion-icon>
+              <a href="library.html">Library</a>
+            </li>
+          </ol>
         </div>
-        <div class="nav-title">
-          <i class="fab fa-spotify"></i>
-          <h3>Strive Spotify</h3>
-        </div>
-        <div class="nav-menu">
-          <div class="list">
-            <ol>
-              <li>
-                <i class="fas fa-home"></i>
-                <a href="home.html">Home</a>
-              </li>
-              <li>
-                <i class="fas fa-search"></i>
-                <a href="#">Search</a>
-              </li>
-              <li>
-                <ion-icon name="library-outline"></ion-icon>
-                <a href="library.html">Library</a>
-              </li>
-            </ol>
+        <div class="user">
+          <div class="user-image">
+            <img src="https://placehold.it/30x30" alt="" />
           </div>
-          <div class="user">
-            <div class="user-image">
-              <img src="https://placehold.it/30x30" alt="" />
-            </div>
-            <a href="login.html">User name</a>
-          </div>
+          <a href="login.html">User name</a>
         </div>
+      </div>
     </nav>
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel"><input type="text" class="btn btn-dark" id="myInput" onkeyup="myFunction()" placeholder="Search for artists..">
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modalScroll">  <img src="" alt="">
+            <ul id="myUL">
+              <li><a href="artist.html"><img src="/Media/ArtistPage/kiss.jpg" style="width: 6rem;height: 6rem; border-radius: 50%; margin-right: 10px;" alt=""> Queen</a></li>
+              
+              <li><a href="#"> <img src="/Media/ArtistPage/eminem1.jpg" style="width: 6rem;height: 6rem; border-radius: 50%; margin-right: 10px;" alt=""> Eminem</a></li>
+              <li><a href="#"> <img src="/Media/ArtistPage/Electric.jpg" style="width: 6rem;height: 6rem; border-radius: 50%; margin-right: 10px;" alt="">Electric Light Orchestra</a></li>
+              <li><a href="#"><img src="/Media/ArtistPage/bobmarley.jpg" style="width: 6rem;height: 6rem; border-radius: 50%; margin-right: 10px;" alt=""> Bob Marley</a></li>
+              <li><a href="adele.html"> <img  src="/Media/ArtistPage/adele.jpg" style="width: 6rem; height: 6rem; border-radius: 50%; margin-right: 10px;" alt="">  Adele</a></li>
+              <li><a href="#"><img src="/Media/ArtistPage/migos.jpg" style="width: 6rem;height: 6rem; border-radius: 50%; margin-right: 10px;" alt=""> Migos</a></li>
+              <li><a href="#"><img src="/Media/ArtistPage/kiss.jpg" style="width: 6rem;height: 6rem; border-radius: 50%; margin-right: 10px;" alt="">Kiss</a></li>
+             
+              <li><a href="50cent.html"> <img src="/Media/ArtistPage/50cent.jpg" style="width: 6rem;height: 6rem; border-radius: 50%; margin-right: 10px;" alt="">50 Cent</a></li>
+              
+              <li><a href="#"><img src="/Media/ArtistPage/Aerosmith.jpg" style="width: 6rem;height: 6rem; border-radius: 50%; margin-right: 10px;" alt=""> Aerosmith</a></li>
+              <li><a href="#"><img src="/Media/ArtistPage/popsmoke.jpg" style="width: 6rem;height: 6rem; border-radius: 50%; margin-right: 10px;" alt=""> Pop Smoke</a></li>
+              <li><a href="cooper.html"> <img src="/Media/ArtistPage/alice.jpg" style="width: 6rem;height: 6rem; border-radius: 50%; margin-right: 10px;" alt="">  Alice Cooper</a></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          
+          </div>
+        </div>
+      </div>
+    </div>
     <main class="main">
-        <nav class="navbar navbar-expand-lg d-flex justify-content-center">
-            <a class="nav-link" href="#" onclick="activeJs()">Trending</a>
-            <a class="nav-link" href="podcast.html" onclick="activeJs1()">Podcast</a>
-            <a class="nav-link" href="#" onclick="activeJs2()">Moods and Genres</a>
-            <a class="nav-link" href="#" onclick="activeJs3()">New releases</a>
-            <a class="nav-link" href="#" onclick="activeJs4()">Discover</a>   
-        </nav>
-        <div class="container">
-            <h2>#ThrowbacksThursday</h2>
+      <nav class="navbar navbar-expand-lg d-flex justify-content-center">
+          <a class="nav-link" href="#" onclick="activeJs()">Trending</a>
+          <a class="nav-link" href="podcast.html" onclick="activeJs1()">Podcast</a>
+          <a class="nav-link" href="moods.html" onclick="activeJs2()">Moods and Genres</a>
+          <a class="nav-link" href="newrelease.html" onclick="activeJs3()">New releases</a>
+          <a class="nav-link" href="#" onclick="activeJs4()">Discover</a>   
+      </nav>
+      <div class="container">
+          <h2>#ThrowbacksThursday</h2>
+      </div>
+
+      <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-6 cards container">
+          <div class="col">
+              <div class="card" style="margin-left: 0 !important; width: 9
+              rem; height: 10rem;">
+                  <img src="./Media/HomePage/images.jpg" class="card-img-top" alt="...">
+                  <button type="button">
+                      <i class="fas fa-play-circle"></i>
+                  </button>
+                  
+                  <p class="text-center">Italian Karaoke</p> 
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card" style="width:9rem; height: 10rem">
+                  <img src="./Media/HomePage/liricisti.jpg" class="card-img-top" alt="...">
+                  <button type="button">
+                      <i class="fas fa-play-circle"></i>
+                  </button>
+                  <p class="text-center">Lyricists</p> 
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card" style="width:9rem; height: 10rem">
+                  <img src="./Media/HomePage/Freiquent rotation.jpg" class="card-img-top" alt="...">
+                  <button type="button">
+                      <i class="fas fa-play-circle"></i>
+                  </button>
+                  <p class="text-center">Italy's Freiquent Rotation</p> 
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card" style="width:9rem; height: 10rem">
+                  <img src="./Media/HomePage/00s italia.jpg" class="card-img-top" alt="...">
+                  <button type="button" class="shade">
+                      <i class="fas fa-play-circle"></i>
+                  </button>
+                  <p class="text-center">00s Italy</p> 
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card" style="width:9rem; height: 10rem">
+                  <img src="./Media/HomePage/aperativo time.jpg" class="card-img-top" alt="...">
+                  <button type="button" class="shade">
+                      <i class="fas fa-play-circle"></i>
+                  </button>
+                  <p class="text-center">Cocktail Hour</p> 
+              </div>
+          </div>
+
+          <div class="col">
+              <div class="card" style="width:9rem; height: 10rem">
+                  <img src="./Media/HomePage/hip hop.jpg" class="card-img-top" alt="...">
+                  <button type="button">
+                      <i class="fas fa-play-circle"></i>
+                  </button>
+                  <p class="text-center">I Love My '90s Hip-Hop</p> 
+              </div>
+          </div>
+      </div>
+
+      <div class="container">
+          <h3>Classifiche</h3>
+      </div>
+
+      <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-5 cards-down container">
+        <div class="col">
+          <div class="card">
+            <img src="./Media/HomePage/8black.jpg" class="card-img-top" alt="...">
+            <div class="italy50 d-flex flex-column">
+                <p class="text-center mb-3" style="margin-top: 2rem; margin-bottom: 0.6rem !important;">Top 50</p>
+                <div>
+                    <div style="width: 78px; height: 2px; background-color: rgba(233, 233, 233, 0.172);" class="mx-auto"></div>
+                </div>
+                <p class="text-center" style="margin-top: 13px; text-transform: uppercase; font-size: 11px; font-weight: 700; letter-spacing: 1.5px;">Italy</p>
+            </div>
+            <i class="fab fa-spotify"></i>
+            <p class="text-center" style="margin-top: 1rem;">Top 50 - Italy</p> 
+          </div>
         </div>
+          
 
-        <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-6 cards container">
-            <div class="col">
-                <div class="card" style="margin-left: 0 !important; width: 9
-                rem; height: 10rem;">
-                    <img src="images/images.jpg" class="card-img-top" alt="...">
-                    <button type="button">
-                        <i class="fas fa-play-circle"></i>
-                    </button>
-                    
-                    <p class="text-center">Italian Karaoke</p> 
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card" style="width:9rem; height: 10rem">
-                    <img src="images/liricisti.jpg" class="card-img-top" alt="...">
-                    <button type="button">
-                        <i class="fas fa-play-circle"></i>
-                    </button>
-                    <p class="text-center">Lyricists</p> 
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card" style="width:9rem; height: 10rem">
-                    <img src="images/Freiquent rotation.jpg" class="card-img-top" alt="...">
-                    <button type="button">
-                        <i class="fas fa-play-circle"></i>
-                    </button>
-                    <p class="text-center">Italy's Freiquent Rotation</p> 
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card" style="width:9rem; height: 10rem">
-                    <img src="images/00s italia.jpg" class="card-img-top" alt="...">
-                    <button type="button" class="shade">
-                        <i class="fas fa-play-circle"></i>
-                    </button>
-                    <p class="text-center">00s Italy</p> 
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card" style="width:9rem; height: 10rem">
-                    <img src="images/aperativo time.jpg" class="card-img-top" alt="...">
-                    <button type="button" class="shade">
-                        <i class="fas fa-play-circle"></i>
-                    </button>
-                    <p class="text-center">Cocktail Hour</p> 
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="card" style="width:9rem; height: 10rem">
-                    <img src="images/hip hop.jpg" class="card-img-top" alt="...">
-                    <button type="button">
-                        <i class="fas fa-play-circle"></i>
-                    </button>
-                    <p class="text-center">I Love My '90s Hip-Hop</p> 
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <h3>Classifiche</h3>
-        </div>
-
-        <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-5 cards-down container">
           <div class="col">
             <div class="card">
-              <img src="images/8black.jpg" class="card-img-top" alt="...">
-              <div class="italy50 d-flex flex-column">
+              <img src="./Media/HomePage/black.jpg" class="card-img-top" alt="...">
+              <div class="italy50 global50 d-flex flex-column">
                   <p class="text-center mb-3" style="margin-top: 2rem; margin-bottom: 0.6rem !important;">Top 50</p>
                   <div>
                       <div style="width: 78px; height: 2px; background-color: rgba(233, 233, 233, 0.172);" class="mx-auto"></div>
                   </div>
-                  <p class="text-center" style="margin-top: 13px; text-transform: uppercase; font-size: 11px; font-weight: 700; letter-spacing: 1.5px;">Italy</p>
+                  <p class="text-center" style="margin-top: 13px; text-transform: uppercase; font-size: 11px; font-weight: 700; letter-spacing: 1.5px;">Global</p>
               </div>
-              <i class="fab fa-spotify""></i>
-              <p class="text-center" style="margin-top: 1rem;">Top 50 - Italy</p> 
-            </div>
-          </div>
-            
-
-            <div class="col">
-              <div class="card">
-                <img src="images/black.jpg" class="card-img-top" alt="...">
-                <div class="italy50 global50 d-flex flex-column">
-                    <p class="text-center mb-3" style="margin-top: 2rem; margin-bottom: 0.6rem !important;">Top 50</p>
-                    <div>
-                        <div style="width: 78px; height: 2px; background-color: rgba(233, 233, 233, 0.172);" class="mx-auto"></div>
-                    </div>
-                    <p class="text-center" style="margin-top: 13px; text-transform: uppercase; font-size: 11px; font-weight: 700; letter-spacing: 1.5px;">Global</p>
-                </div>
-                <i class="fab fa-spotify""></i>
-                <p class="text-center" style="margin-top: 1rem;">Top 50 - Global</p> 
-              </div>
-            </div>
-
-            
-
-          <div class="col">
-            <div class="card viral">
-              <img src="images/black3.jpg" class="card-img-top" alt="..." style="width: 160px; height: 160px;">
-              <div class="italy50 viral50-g d-flex flex-column">
-                <p class="text-center mb-3" style="margin-top: 2rem; margin-bottom: 0.6rem !important; color: rgba(63, 1, 63, 0.802);">Viral 50</p>
-              </div>
-
-              <div class="italy50 viral50-g-down d-flex flex-column">
-                <p class="text-center mb-3">Global</p>
-              </div>
-              <i class="fab fa-spotify""></i>
-              <p class="text-center" style="margin-top: 1rem;">Viral 50 - Global</p>
-                 
+              <i class="fab fa-spotify"></i>
+              <p class="text-center" style="margin-top: 1rem;">Top 50 - Global</p> 
             </div>
           </div>
 
-            
+          
 
-          <div class="col">
-            <div class="card">
-              <img src="images/colosseo1.jpg" class="card-img-top" alt="..." style="width: 160px; height: 160px;">
-              <div class="italy50 viral50-g italy d-flex flex-column">
-                <p class="text-center mb-3" style="margin-top: 2rem; margin-bottom: 0.6rem !important; color: white;">Viral 50</p>
-              </div>
-
-              <div class="italy50 viral50-g-down italy d-flex flex-column">
-                <p class="text-center mb-3">Italy</p>
-              </div>
-              <i class="fab fa-spotify""></i>
-              <p class="text-center" style="margin-top: 1rem;">Viral 50 - Italy</p> 
+        <div class="col">
+          <div class="card viral">
+            <img src="./Media/HomePage/black3.jpg" class="card-img-top" alt="..." style="width: 160px; height: 160px;">
+            <div class="italy50 viral50-g d-flex flex-column">
+              <p class="text-center mb-3" style="margin-top: 2rem; margin-bottom: 0.6rem !important; color: rgba(63, 1, 63, 0.802);">Viral 50</p>
             </div>
+
+            <div class="italy50 viral50-g-down d-flex flex-column">
+              <p class="text-center mb-3">Global</p>
+            </div>
+            <i class="fab fa-spotify"></i>
+            <p class="text-center" style="margin-top: 1rem;">Viral 50 - Global</p>
+               
           </div>
-
-
         </div>
-    </main>
 
+          
+
+        <div class="col">
+          <div class="card">
+            <img src="./Media/HomePage/colosseo1.jpg" class="card-img-top" alt="..." style="width: 160px; height: 160px;">
+            <div class="italy50 viral50-g italy d-flex flex-column">
+              <p class="text-center mb-3" style="margin-top: 2rem; margin-bottom: 0.6rem !important; color: white;">Viral 50</p>
+            </div>
+
+            <div class="italy50 viral50-g-down italy d-flex flex-column">
+              <p class="text-center mb-3">Italy</p>
+            </div>
+            <i class="fab fa-spotify"></i>
+            <p class="text-center" style="margin-top: 1rem;">Viral 50 - Italy</p> 
+          </div>
+        </div>
+
+
+      </div>
+  </main>
     <footer>
       <div class="player d-flex justify-content-between fixed-bottom mt-5">
         <div class="left d-flex">
-            <img src="./Media/ArtistPage/footer.jpg" alt="">
-            <div class="d-flex flex-column">
-                <p>Song For My Father</p>
-                <p>Horace Silver</p>
           <img src="" alt="" class="track-art">
           <div class="d-flex flex-column">
               <p class="track-name"></p>
@@ -216,6 +262,7 @@
                 <path d="M8 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5v-3z"/>
             </svg>
         </div>
+
         <div class="middle d-flex flex-column p-0">
             <div class="d-flex justify-content-center">
                 <button type="button" class="btn" >
@@ -224,6 +271,7 @@
                         <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
                     </svg>
                 </button>
+
                 <button type="button" class="btn">
                   <div class="prev-track" onclick="prevTrack()"> 
                     <i class="fa fa-step-backward fa" style="color:white;"></i> 
@@ -256,6 +304,7 @@
                 <div class="total-duration" style="color:white;">00:00</div>
             </div>
         </div>
+
         <div class="right d-flex align-items-center">
             <button type="button" class="btn">
                 <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-justify-left" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg">
@@ -284,66 +333,75 @@
         </div>
     </div>
     </footer>
-
     <script>
-        // function activeJs() {
-        //     let x = document.querySelectorAll(".nav-link")
-        //     x[1].classList.remove('active')
-        //     x[2].classList.remove('active')
-        //     x[3].classList.remove('active')
-        //     x[4].classList.remove('active')
-        //     x[0].classList.add('active')
-        // }
-        
-        // function activeJs1() {
-        //     let x = document.querySelectorAll(".nav-link")
-        //     x[0].classList.remove('active')
-        //     x[2].classList.remove('active')
-        //     x[3].classList.remove('active')
-        //     x[4].classList.remove('active')
-        //     x[1].classList.add('active')
-        // }
+      // function activeJs() {
+      //     let x = document.querySelectorAll(".nav-link")
+      //     x[1].classList.remove('active')
+      //     x[2].classList.remove('active')
+      //     x[3].classList.remove('active')
+      //     x[4].classList.remove('active')
+      //     x[0].classList.add('active')
+      // }
 
-        // function activeJs2() {
-        //     let x = document.querySelectorAll(".nav-link")
-        //     x[1].classList.remove('active')
-        //     x[0].classList.remove('active')
-        //     x[3].classList.remove('active')
-        //     x[4].classList.remove('active')
-        //     x[2].classList.add('active')
-        // }
+      // function activeJs1() {
+      //     let x = document.querySelectorAll(".nav-link")
+      //     x[0].classList.remove('active')
+      //     x[2].classList.remove('active')
+      //     x[3].classList.remove('active')
+      //     x[4].classList.remove('active')
+      //     x[1].classList.add('active')
+      // }
 
-        // function activeJs3() {
-        //     let x = document.querySelectorAll(".nav-link")
-        //     x[1].classList.remove('active')
-        //     x[2].classList.remove('active')
-        //     x[0].classList.remove('active')
-        //     x[4].classList.remove('active')
-        //     x[3].classList.add('active')
-        // }
+      // function activeJs2() {
+      //     let x = document.querySelectorAll(".nav-link")
+      //     x[1].classList.remove('active')
+      //     x[0].classList.remove('active')
+      //     x[3].classList.remove('active')
+      //     x[4].classList.remove('active')
+      //     x[2].classList.add('active')
+      // }
 
-        // function activeJs4() {
-        //     let x = document.querySelectorAll(".nav-link")
-        //     x[1].classList.remove('active')
-        //     x[2].classList.remove('active')
-        //     x[3].classList.remove('active')
-        //     x[0].classList.remove('active')
-        //     x[4].classList.add('active')
-        // }
+      // function activeJs3() {
+      //     let x = document.querySelectorAll(".nav-link")
+      //     x[1].classList.remove('active')
+      //     x[2].classList.remove('active')
+      //     x[0].classList.remove('active')
+      //     x[4].classList.remove('active')
+      //     x[3].classList.add('active')
+      // }
 
-        let navLinks = document.querySelectorAll('.nav-link')
-             for( let a = 0; a < navLinks.length; a++){
-             navLinks[a].addEventListener('click', function(){navLinks[a].classList.add('active')
-             navLinks[np.delete(a, exclude)].classList.remove = ('active')
-             })}
-             
-             
- 
-       
+      // function activeJs4() {
+      //     let x = document.querySelectorAll(".nav-link")
+      //     x[1].classList.remove('active')
+      //     x[2].classList.remove('active')
+      //     x[3].classList.remove('active')
+      //     x[0].classList.remove('active')
+      //     x[4].classList.add('active')
+      // }
+
+      let navLinks = document.querySelectorAll(".nav-link");
+      for (let a = 0; a < navLinks.length; a++) {
+        navLinks[a].addEventListener("click", function () {
+          navLinks[a].classList.add("active");
+          navLinks[np.delete(a, exclude)].classList.remove = "active";
+        });
+      }
     </script>
-    
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>    
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js%22%3E">  </script>
+<!-- IONICONS LIBRARY-->
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  
   </body>
 </html>

@@ -55,7 +55,10 @@ let availableDetails = document.querySelectorAll('.available-details')
 //AVAILABLES COVER
 let albumBg = [
     './Media/queenRemaster.jpg',
-    './Media/miracle.jpg'
+    './Media/miracle.jpg',
+    './Media/25.jpg',
+    './Media/getRich.jpg',
+    './Media/trash.jpg'
 ]
 
 //SONG SOURCE
@@ -105,8 +108,56 @@ let miracleTitles = [
     "Chinese Torture"
 ]
 
+let adele = [
+    'Hello',
+    'Send My Love (To Your New Lover',
+    'I Miss You',
+    'When We Were Young',
+    'Remedy',
+    'Water Under the Bridge',
+    'River Lea',
+    'Love in the Dark',
+    'Million Years Ago',
+    'All I Ask',
+    'Sweetest Devotion',
+]
+
+let cent = [
+    'What Up Gangsta',
+    'Patiently Waiting (feat. Eminem)',
+    'Many Men (Wish Death)',
+    'In Da Club',
+    'High All the Time',
+    'Heat',
+    "If I Can't",
+    'Blood Hound (feat. Young Buck)',
+    'Back Down',
+    'P.I.M.P.',
+    'Like My Style (feat. Tony Tayo)',
+    'Poor Lil Rich',
+    '21 Questions (feat. Nate Dogg)',
+    "Don't Push Me (feat. Lloyd Banks and Eminem)",
+    'Gotta Make It to Heaven',
+]
+
+let cooper = [
+    'Poison',
+    'Spark in the Dark',
+    'House of Fire',
+    'Why Trust You',
+    'Only My Heart talking',
+    'Bed of Nails',
+    "This Maniac's in Love with You",
+    'Trash',
+    'Hell Is Living Without You',
+    "I'm Your Gun",
+]
+
 songTitles.push(remasterTitles)
 songTitles.push(miracleTitles)
+songTitles.push(adele)
+songTitles.push(cent)
+songTitles.push(cooper)
 
 
 //SONGS LENGTH
@@ -141,8 +192,56 @@ let miracleLenght = [
     '1:46',
 ]
 
+let adeleLenght = [
+    '4:55',
+    '3:43',
+    '5:48',
+    '4:51',
+    '4:05',
+    '4:00',
+    '3:45',
+    '4:46',
+    '3:46',
+    '4:32',
+    '4:12',
+]
+
+let centLenght = [
+    '2:59',
+    '4:48',
+    '4:16',
+    '3:13',
+    '4:29',
+    '4:14',
+    '3:16',
+    '4:00',
+    '4:03',
+    '4:09',
+    '3:13',
+    '3:19',
+    '3:44',
+    '4:08',
+    '4:00',
+]
+
+let cooperLenght = [
+    '4:29',
+    '3:52',
+    '3:47',
+    '3:12',
+    '4:47',
+    '4:20',
+    '3:48',
+    '4:01',
+    '4:11',
+    '3:47',
+]
+
 tracksLength.push(remasterLenght)
 tracksLength.push(miracleLenght)
+tracksLength.push(adeleLenght)
+tracksLength.push(centLenght)
+tracksLength.push(cooperLenght)
 
 //Album Title (SONG DETAIL)
 
@@ -150,9 +249,15 @@ let albumTitleSD = []
 
 let remaster = ' - Remaster 2011'
 let miracle = ' - The Miracle'
+let adele25 = ' - 25'
+let getRich = ' - Get Rich or Die Tryin'
+let trash = ' - Trash'
 
 albumTitleSD.push(remaster)
 albumTitleSD.push(miracle)
+albumTitleSD.push(adele25)
+albumTitleSD.push(getRich)
+albumTitleSD.push(trash)
 
 
 
@@ -192,14 +297,16 @@ for(let b = 0; b < availableAlbums.length; b++){
         albumDetails.innerText = availableDetails[b].innerText
         albumCont.removeChild(addImg)
         createTrack()
-        //PUSH ALBUM ON THE ARRAY
-        let completedALbum = document.querySelector('#page-content')
-        completedALbum.classList.add('newAlbum'+ b)
-        allAlbum.push(completedALbum)
+        
     })
-
+    //PUSH ALBUM ON THE ARRAY
+    let completedALbum = document.querySelector('.album-page')
+    completedALbum.classList.add('newAlbum'+ b)
+    allAlbum.push(completedALbum)
 
 }
+
+
 
 
 
@@ -215,3 +322,4 @@ like.addEventListener('click', function(){
         setTimeout(function(){favAdded.style.display = 'none'}, 300)
     }
 })
+

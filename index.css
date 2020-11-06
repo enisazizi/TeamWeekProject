@@ -243,6 +243,13 @@ div.player svg:nth-of-type(2){
     }
 }
 
+@keyframes rotation{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(-360deg);
+    transition: transform 2s ease}
+   
+}
+
 
 
 /* MEDIA QUERIES-------------------------------------------------------------------------------------------------------- */
@@ -345,4 +352,126 @@ div.player svg:nth-of-type(2){
   .current-time, 
 .total-duration { 
   padding: 10px; 
-} 
+}
+
+/*PLAYER*/
+
+.track-art{
+    border-radius: 50%;
+}
+
+ 
+#myInput{
+    width: 27rem;
+}
+#myUL {
+    
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  #myUL li a {
+    background-color: #f6f6f6; 
+    padding: 12px; 
+    text-decoration: none; 
+    font-size: 22px;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    color: black; 
+    display: block;
+  }
+  #myUL li a:hover:not(.header) {
+    background-color: #eee; 
+    
+  }
+
+  .modalScroll {
+    overflow-y:scroll;
+    height: 300px;
+    
+    }
+    .library-play-button-s{
+        display: flex;
+        border-radius: 50%;
+        background-color:blue;
+        
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 28%;
+        bottom: 0;
+        left: 37%;
+        right: 0;
+        transform: translate(-50%, -50%);
+        transform: scale(0);
+        transition: 3s ease;
+       
+        overflow: hidden;
+         height: 60px;
+          width: 60px;
+        
+        color: #ffffff;
+     
+    }
+    .first-image:hover .library-play-button-s{
+        transform: scale(1);
+        transition: 4s;
+    }
+
+    @media  (max-width: 1103px){
+        div.box {
+            animation: images 3s;
+            width: 35rem;
+            height: 20rem;
+            border: 15px solid gray;
+            padding: 50px;
+            margin-left: 7rem;
+            font-size: 14px;
+            background-color: darkslategray;
+            overflow-y:scroll;
+           
+            
+          }
+          div.box p {
+              color: white;
+          }
+    }
+    @media  (max-width: 903px){
+        div.box {
+            margin-left: 5rem;
+            width: 30rem;
+            height: 18rem;
+          
+           
+            
+          }
+        }
+        @media  (max-width: 783px){
+            div.box {
+                margin-left: 1rem;
+                width: 18rem;
+                height: 18rem;
+                margin-left: 5rem;
+              
+               
+                
+              }
+            }
+            @media  (max-width: 495px){
+                div.box {
+                   
+                    margin-left: 1rem;
+                  
+                   
+                    
+                  }
+                }
+                @media  (max-width: 383px){
+                    div.box {
+                       
+                        margin-left: 0;
+                      
+                       
+                        
+                      }
+                    }
