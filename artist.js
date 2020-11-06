@@ -82,10 +82,10 @@ let example = () => {
     .then((body) => {
       console.log(body);
 
-      let container = document.querySelector(".main-artist");
+      let container = document.querySelector("#workplease");
       let div = document.createElement("div");
       div.classList.add("main-artist")
-      container.setAttribute("style", `margin-left=0`);
+      container.setAttribute("style", ` margin-left: 0;`);
       // let myMain = document.querySelector("#shade")  ${body.picture_medium} ${body.name}
 
       div.innerHTML = ` 
@@ -135,8 +135,11 @@ let example = () => {
   console.log(body)
   let myalbums = document.querySelector("#justwork");
 
- for (let i = 0; i < 15; i++) {
-  myalbums.innerHTML=`
+  console.log(body.data.length)
+ let htmlString = ""
+ for (let i = 0; i < body.data.length; i++) {
+   htmlString=htmlString+
+    `
   <div class="col col-12 col-md-4 col-lg-2 text-center">
   <div class="first-image">
     <a href="#">
@@ -155,16 +158,13 @@ let example = () => {
       <i class="fas fa-play"></i>
     </div>
   </div>
-</div>`
- ;
+</div>`;
  }
-
+myalbums.innerHTML=htmlString
 
 })
 
-
-
-.catch(err => {
-	console.error(err);
-});
  }
+
+
+ 
