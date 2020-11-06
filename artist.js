@@ -110,7 +110,7 @@ function myFunction() {
             <a href="#" class="mr-3" onclick="linkBorder3()">ABOUT</a>
           </div>
         </div> 
-        
+    </div>
         
         
           `;
