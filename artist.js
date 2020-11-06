@@ -62,13 +62,18 @@ function myFunction() {
 }
 
 window.onload = function () {
-  example();
-  example2();
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const artist = urlParams.get("artist");
+  const name = urlParams.get("name");
+  name.replace(/%20/g, " ");
+  example(artist);
+  example2(name);
 };
 
-let example = () => {
+let example = (query) => {
   const striveapi = fetch(
-    "https://deezerdevs-deezer.p.rapidapi.com/artist/13",
+    `https://deezerdevs-deezer.p.rapidapi.com/artist/${query}`,
     {
       method: "GET",
       headers: {
@@ -84,7 +89,7 @@ let example = () => {
 
       let container = document.querySelector("#workplease");
       let div = document.createElement("div");
-      div.classList.add("main-artist")
+      div.classList.add("main-artist");
       container.setAttribute("style", ` margin-left: 0;`);
       // let myMain = document.querySelector("#shade")  ${body.picture_medium} ${body.name}
 
@@ -97,7 +102,7 @@ let example = () => {
       <div class="centered">
         <div>
           <p>33,000,575 MONTHLY LISTENERS</p>
-          <h1><b>${body.name}</b></h1>
+          <h1 id="artistName"><b>${body.name}</b></h1>
           <input class="btn btn-success" type="button" value="Play" />
           <input class="btn btn-primary-outline" type="button" value="Follow" />
           <div class="mt-5">
@@ -110,6 +115,7 @@ let example = () => {
         
         
           `;
+      artistName = body.name;
       container.insertBefore(div, container.firstElementChild);
       //container.appendChild(myMain);
     })
@@ -120,26 +126,27 @@ let example = () => {
 };
 // "https://api.deezer.com/artist/13/top?limit=50",
 
- let example2 = () => {
- const anotherfetch =fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "c608fc777fmshd55587c64c83d78p1ebebcjsn20918a48db47",
-		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
-	}
-})
+let example2 = (query) => {
+  const anotherfetch = fetch(
+    `https://deezerdevs-deezer.p.rapidapi.com/search?q=${query}`,
+    {
+      method: "GET",
+      headers: {
+        "x-rapidapi-key": "c608fc777fmshd55587c64c83d78p1ebebcjsn20918a48db47",
+        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+      },
+    }
+  )
+    .then((response) => response.json())
+    .then((body) => {
+      console.log(body);
+      let myalbums = document.querySelector("#justwork");
 
-
-.then((response)=>response.json())
-.then((body)=>{
-  console.log(body)
-  let myalbums = document.querySelector("#justwork");
-
-  console.log(body.data.length)
- let htmlString = ""
- for (let i = 0; i < body.data.length; i++) {
-   htmlString=htmlString+
-    `
+      let htmlString = "";
+      for (let i = 0; i < body.data.length; i++) {
+        htmlString =
+          htmlString +
+          `
   <div class="col col-12 col-md-4 col-lg-2 text-center">
   <div class="first-image">
     <a href="#">
@@ -159,12 +166,7 @@ let example = () => {
     </div>
   </div>
 </div>`;
- }
-myalbums.innerHTML=htmlString
-
-})
-
- }
-
-
- 
+      }
+      myalbums.innerHTML = htmlString;
+    });
+};
