@@ -66,3 +66,67 @@ function myFunction() {
       }
     }
   }
+
+  window.onload = function(){
+
+    example()
+  }
+
+    let example = ()=>{
+
+    
+    const striveapi = fetch("https://deezerdevs-deezer.p.rapidapi.com/artist/13", {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-key": "c608fc777fmshd55587c64c83d78p1ebebcjsn20918a48db47",
+        "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com"
+      }
+    })
+    .then((response)=>response.json())
+
+    .then((body)=>{
+     
+      console.log(body)
+     
+      let container = document.querySelector(".main-artist");
+    
+      // let myMain = document.querySelector("#shade")  ${body.picture_medium} ${body.name}
+        
+        container.innerHTML = ` 
+        <div id="shade">
+        <img src="${body.picture_big}" alt="" width="100%" />
+        <div id="shadeBg"></div>
+        </div>
+
+      <div class="centered">
+        <div>
+          <p>33,000,575 MONTHLY LISTENERS</p>
+          <h1><b>${body.name}</b></h1>
+          <input class="btn btn-success" type="button" value="Play" />
+          <input class="btn btn-primary-outline" type="button" value="Follow" />
+          <div class="mt-5">
+            <a href="#" class="mr-3 border1" onclick="linkBorder()">OVERVIEW</a>
+            <a href="#" class="mr-3" onclick="linkBorder2()">RELATED ARTIST</a>
+            <a href="#" class="mr-3" onclick="linkBorder3()">ABOUT</a>
+          </div>
+        </div> 
+        
+        
+        
+          `;
+        // container.appendChild(myMain);
+      })
+    
+    
+
+
+
+
+
+    .catch(err => {
+      console.error(err);
+    });
+    
+      
+  }
+ 
